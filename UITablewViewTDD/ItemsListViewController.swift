@@ -7,22 +7,6 @@
 
 import UIKit
 
-public struct Item {
-    public let name: String
-    
-    public init(name: String) {
-        self.name = name
-    }
-}
-
-public protocol ItemsLoader {
-    func load(completion: @escaping (Result<[Item], Error>) -> Void)
-}
-
-public class ItemCell: UITableViewCell {
-    public var name: String?
-}
-
 public final class ItemsListViewController: UITableViewController {
     public var viewModel: ItemsListViewModel? {
         didSet { bind() }
@@ -79,44 +63,5 @@ public final class ItemsListViewController: UITableViewController {
         cell.name = model.name
         
         return cell
-    }
-}
-
-public class ItemsListViewModel {
-    private let loader: ItemsLoader
-    
-    typealias Observer<T> = (T) -> Void
-    
-    var onErrorStateChange: Observer<Void>?
-    var onItemsLoad: Observer<[Item]>?
-    
-    public init(loader: ItemsLoader) {
-        self.loader = loader
-    }
-    
-    public let errorMessage = "There was an error when trying to load items"
-    
-    func loadItems() {
-        loader.load(completion: { [weak self] result in
-            switch result {
-            case .failure:
-                self?.onErrorStateChange?(())
-            case let .success(items):
-                self?.onItemsLoad?(items)
-            }
-        })
-    }
-}
-
-public class ItemsListUIComposer {
-    private init() {}
-    
-    public static func makeItemsList(loader: ItemsLoader) -> ItemsListViewController {
-        let vc = ItemsListViewController()
-        let viewModel = ItemsListViewModel(loader: loader)
-        
-        vc.viewModel = viewModel
-        
-        return vc
     }
 }

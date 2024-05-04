@@ -13,6 +13,11 @@
 		4AE01BAB2BE654D0001FBDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE01BA92BE654D0001FBDB0 /* LaunchScreen.storyboard */; };
 		4AE01BB92BE654F0001FBDB0 /* ItemsListUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE01BB82BE654F0001FBDB0 /* ItemsListUIIntegrationTests.swift */; };
 		4AE01BC02BE65952001FBDB0 /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE01BBF2BE65952001FBDB0 /* ItemsListViewController.swift */; };
+		4AE01BC22BE69687001FBDB0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE01BC12BE69687001FBDB0 /* Item.swift */; };
+		4AE01BC42BE696A0001FBDB0 /* ItemsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE01BC32BE696A0001FBDB0 /* ItemsLoader.swift */; };
+		4AE01BC62BE696B0001FBDB0 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE01BC52BE696B0001FBDB0 /* ItemCell.swift */; };
+		4AE01BC82BE696CC001FBDB0 /* ItemsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE01BC72BE696CC001FBDB0 /* ItemsListViewModel.swift */; };
+		4AE01BCA2BE696E6001FBDB0 /* ItemsListUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE01BC92BE696E6001FBDB0 /* ItemsListUIComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,12 @@
 		4AE01BB62BE654F0001FBDB0 /* UITablewViewTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITablewViewTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE01BB82BE654F0001FBDB0 /* ItemsListUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListUIIntegrationTests.swift; sourceTree = "<group>"; };
 		4AE01BBF2BE65952001FBDB0 /* ItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewController.swift; sourceTree = "<group>"; };
+		4AE01BC12BE69687001FBDB0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		4AE01BC32BE696A0001FBDB0 /* ItemsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsLoader.swift; sourceTree = "<group>"; };
+		4AE01BC52BE696B0001FBDB0 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		4AE01BC72BE696CC001FBDB0 /* ItemsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewModel.swift; sourceTree = "<group>"; };
+		4AE01BC92BE696E6001FBDB0 /* ItemsListUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListUIComposer.swift; sourceTree = "<group>"; };
+		4AE01BCB2BE6985D001FBDB0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 		4AE01B922BE654CF001FBDB0 = {
 			isa = PBXGroup;
 			children = (
+				4AE01BCB2BE6985D001FBDB0 /* README.md */,
 				4AE01B9D2BE654CF001FBDB0 /* UITablewViewTDD */,
 				4AE01BB72BE654F0001FBDB0 /* UITablewViewTDDTests */,
 				4AE01B9C2BE654CF001FBDB0 /* Products */,
@@ -82,6 +94,11 @@
 				4AE01BA92BE654D0001FBDB0 /* LaunchScreen.storyboard */,
 				4AE01BAC2BE654D0001FBDB0 /* Info.plist */,
 				4AE01BBF2BE65952001FBDB0 /* ItemsListViewController.swift */,
+				4AE01BC12BE69687001FBDB0 /* Item.swift */,
+				4AE01BC32BE696A0001FBDB0 /* ItemsLoader.swift */,
+				4AE01BC52BE696B0001FBDB0 /* ItemCell.swift */,
+				4AE01BC72BE696CC001FBDB0 /* ItemsListViewModel.swift */,
+				4AE01BC92BE696E6001FBDB0 /* ItemsListUIComposer.swift */,
 			);
 			path = UITablewViewTDD;
 			sourceTree = "<group>";
@@ -194,8 +211,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE01BCA2BE696E6001FBDB0 /* ItemsListUIComposer.swift in Sources */,
+				4AE01BC22BE69687001FBDB0 /* Item.swift in Sources */,
 				4AE01B9F2BE654CF001FBDB0 /* AppDelegate.swift in Sources */,
+				4AE01BC62BE696B0001FBDB0 /* ItemCell.swift in Sources */,
 				4AE01BA12BE654CF001FBDB0 /* SceneDelegate.swift in Sources */,
+				4AE01BC82BE696CC001FBDB0 /* ItemsListViewModel.swift in Sources */,
+				4AE01BC42BE696A0001FBDB0 /* ItemsLoader.swift in Sources */,
 				4AE01BC02BE65952001FBDB0 /* ItemsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

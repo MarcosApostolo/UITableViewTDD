@@ -46,6 +46,21 @@ final class ItemsListUIIntegrationTests: XCTestCase {
         assertThat(sut, isRendering: allItems)
     }
     
+    func test_loadItems_dispatchesFromBackgroundToMainThread() {
+        let (sut, loader) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+
+        let exp = expectation(description: "Wait for background queue")
+        
+        DispatchQueue.global().async {
+            loader.completeSuccessfully(with: [])
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: 1.0)
+    }
+    
     // MARK Helpers
     func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: ItemsListViewController, loader: LoaderSpy) {
         let loader = LoaderSpy()
