@@ -39,13 +39,28 @@ final class ItemsListUIIntegrationTests: XCTestCase {
         
         sut.loadViewIfNeeded()
         
-        XCTAssertEqual(sut.numberOfRenderedItemCellViews, 0, "Expected no items load before load items complete")
+        assertThat(sut, isRendering: [])
         
         loader.completeSuccessfully(with: allItems)
         
-        XCTAssertEqual(sut.numberOfRenderedItemCellViews, 3, "Expected items displayed when load completes successfully")
+        assertThat(sut, isRendering: allItems)
+    }
+    
+    // MARK Helpers
+    func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: ItemsListViewController, loader: LoaderSpy) {
+        let loader = LoaderSpy()
+        let sut = ItemsListUIComposer.makeItemsList(loader: loader)
         
-        allItems.enumerated().forEach({ index, item in
+        checkForMemoryLeaks(sut, file: file, line: line)
+        checkForMemoryLeaks(loader, file: file, line: line)
+        
+        return (sut, loader)
+    }
+    
+    func assertThat(_ sut: ItemsListViewController, isRendering items: [Item], file: StaticString = #filePath, line: UInt = #line) {
+        XCTAssertEqual(sut.numberOfRenderedItemCellViews, items.count, "Expected items displayed when load completes successfully")
+        
+        items.enumerated().forEach({ index, item in
             let view = sut.itemCell(for: index)
 
             guard let itemCell = view as? ItemCell else {
@@ -54,19 +69,6 @@ final class ItemsListUIIntegrationTests: XCTestCase {
             
             XCTAssertEqual(itemCell.name, item.name)
         })
-    }
-    
-    // MARK Helpers
-    func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: ItemsListViewController, loader: LoaderSpy) {
-        let loader = LoaderSpy()
-        let sut = ItemsListViewController()
-        
-        sut.loader = loader
-        
-        checkForMemoryLeaks(sut, file: file, line: line)
-        checkForMemoryLeaks(loader, file: file, line: line)
-        
-        return (sut, loader)
     }
 }
 
