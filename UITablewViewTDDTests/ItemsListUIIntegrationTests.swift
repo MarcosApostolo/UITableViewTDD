@@ -29,6 +29,33 @@ final class ItemsListUIIntegrationTests: XCTestCase {
         XCTAssertFalse(sut.errorMessageLabel.isHidden, "Expect error message to be displayed when load fails")
     }
     
+    func test_onLoadSuccess_displayItems() {
+        let (sut, loader) = makeSUT()
+        
+        let item0 = Item(name: "a name")
+        let item1 = Item(name: "another name")
+        let item2 = Item(name: "a different name")
+        let allItems = [item0, item1, item2]
+        
+        sut.loadViewIfNeeded()
+        
+        XCTAssertEqual(sut.numberOfRenderedItemCellViews, 0, "Expected no items load before load items complete")
+        
+        loader.completeSuccessfully(with: allItems)
+        
+        XCTAssertEqual(sut.numberOfRenderedItemCellViews, 3, "Expected items displayed when load completes successfully")
+        
+        allItems.enumerated().forEach({ index, item in
+            let view = sut.itemCell(for: index)
+
+            guard let itemCell = view as? ItemCell else {
+                return XCTFail("Expected \(ItemCell.self) instance, got \(String(describing: view)) instead")
+            }
+            
+            XCTAssertEqual(itemCell.name, item.name)
+        })
+    }
+    
     // MARK Helpers
     func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: ItemsListViewController, loader: LoaderSpy) {
         let loader = LoaderSpy()
@@ -53,6 +80,10 @@ class LoaderSpy: ItemsLoader {
     func completeWithError(at index: Int = 0) {
         loadMessages[index](.failure(anyNSError()))
     }
+    
+    func completeSuccessfully(with items: [Item], at index: Int = 0) {
+        loadMessages[index](.success(items))
+    }
 }
 
 func anyNSError() -> Error {
@@ -64,5 +95,19 @@ extension XCTestCase {
         addTeardownBlock { [weak instance] in
             XCTAssertNil(instance, file: file, line: line)
         }
+    }
+}
+
+extension ItemsListViewController {
+    var numberOfRenderedItemCellViews: Int {
+        tableView.numberOfRows(inSection: section)
+    }
+    
+    var section: Int {
+        0
+    }
+    
+    func itemCell(for index: Int) -> UITableViewCell {
+        return tableView(tableView, cellForRowAt: IndexPath(row: index, section: section))
     }
 }
