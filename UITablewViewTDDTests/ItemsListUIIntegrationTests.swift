@@ -82,7 +82,7 @@ final class ItemsListUIIntegrationTests: XCTestCase {
                 return XCTFail("Expected \(ItemCell.self) instance, got \(String(describing: view)) instead")
             }
             
-            XCTAssertEqual(itemCell.name, item.name)
+            XCTAssertEqual(itemCell.name, item.name, "Expected item cell name to match model name property")
         })
     }
 }
