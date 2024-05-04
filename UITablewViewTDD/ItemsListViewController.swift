@@ -18,9 +18,26 @@ public protocol ItemsLoader {
 public final class ItemsListViewController: UITableViewController {
     public var loader: ItemsLoader?
     
+    private(set) public lazy var errorMessageLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = "There was an error when trying to load items"
+        
+        label.isHidden = true
+        
+        return label
+    }()
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        loader?.load(completion: { _ in })
+        loader?.load(completion: { result in
+            switch result {
+            case .failure:
+                self.errorMessageLabel.isHidden = false
+            default:
+                break
+            }
+        })
     }
 }
