@@ -9,25 +9,41 @@
 /* Begin PBXBuildFile section */
 		4AE01B9F2BE654CF001FBDB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE01B9E2BE654CF001FBDB0 /* AppDelegate.swift */; };
 		4AE01BA12BE654CF001FBDB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE01BA02BE654CF001FBDB0 /* SceneDelegate.swift */; };
-		4AE01BA32BE654CF001FBDB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE01BA22BE654CF001FBDB0 /* ViewController.swift */; };
-		4AE01BA62BE654CF001FBDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE01BA42BE654CF001FBDB0 /* Main.storyboard */; };
 		4AE01BA82BE654D0001FBDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE01BA72BE654D0001FBDB0 /* Assets.xcassets */; };
 		4AE01BAB2BE654D0001FBDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE01BA92BE654D0001FBDB0 /* LaunchScreen.storyboard */; };
+		4AE01BB92BE654F0001FBDB0 /* UITablewViewTDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE01BB82BE654F0001FBDB0 /* UITablewViewTDDTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4AE01BBA2BE654F0001FBDB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AE01B932BE654CF001FBDB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AE01B9A2BE654CF001FBDB0;
+			remoteInfo = UITablewViewTDD;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4AE01B9B2BE654CF001FBDB0 /* UITablewViewTDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITablewViewTDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE01B9E2BE654CF001FBDB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE01BA02BE654CF001FBDB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4AE01BA22BE654CF001FBDB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4AE01BA52BE654CF001FBDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AE01BA72BE654D0001FBDB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AE01BAA2BE654D0001FBDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AE01BAC2BE654D0001FBDB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AE01BB62BE654F0001FBDB0 /* UITablewViewTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITablewViewTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AE01BB82BE654F0001FBDB0 /* UITablewViewTDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITablewViewTDDTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4AE01B982BE654CF001FBDB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AE01BB32BE654F0001FBDB0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				4AE01B9D2BE654CF001FBDB0 /* UITablewViewTDD */,
+				4AE01BB72BE654F0001FBDB0 /* UITablewViewTDDTests */,
 				4AE01B9C2BE654CF001FBDB0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				4AE01B9B2BE654CF001FBDB0 /* UITablewViewTDD.app */,
+				4AE01BB62BE654F0001FBDB0 /* UITablewViewTDDTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,13 +76,19 @@
 			children = (
 				4AE01B9E2BE654CF001FBDB0 /* AppDelegate.swift */,
 				4AE01BA02BE654CF001FBDB0 /* SceneDelegate.swift */,
-				4AE01BA22BE654CF001FBDB0 /* ViewController.swift */,
-				4AE01BA42BE654CF001FBDB0 /* Main.storyboard */,
 				4AE01BA72BE654D0001FBDB0 /* Assets.xcassets */,
 				4AE01BA92BE654D0001FBDB0 /* LaunchScreen.storyboard */,
 				4AE01BAC2BE654D0001FBDB0 /* Info.plist */,
 			);
 			path = UITablewViewTDD;
+			sourceTree = "<group>";
+		};
+		4AE01BB72BE654F0001FBDB0 /* UITablewViewTDDTests */ = {
+			isa = PBXGroup;
+			children = (
+				4AE01BB82BE654F0001FBDB0 /* UITablewViewTDDTests.swift */,
+			);
+			path = UITablewViewTDDTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +111,24 @@
 			productReference = 4AE01B9B2BE654CF001FBDB0 /* UITablewViewTDD.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4AE01BB52BE654F0001FBDB0 /* UITablewViewTDDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AE01BBC2BE654F0001FBDB0 /* Build configuration list for PBXNativeTarget "UITablewViewTDDTests" */;
+			buildPhases = (
+				4AE01BB22BE654F0001FBDB0 /* Sources */,
+				4AE01BB32BE654F0001FBDB0 /* Frameworks */,
+				4AE01BB42BE654F0001FBDB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4AE01BBB2BE654F0001FBDB0 /* PBXTargetDependency */,
+			);
+			name = UITablewViewTDDTests;
+			productName = UITablewViewTDDTests;
+			productReference = 4AE01BB62BE654F0001FBDB0 /* UITablewViewTDDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +141,10 @@
 				TargetAttributes = {
 					4AE01B9A2BE654CF001FBDB0 = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					4AE01BB52BE654F0001FBDB0 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 4AE01B9A2BE654CF001FBDB0;
 					};
 				};
 			};
@@ -116,6 +162,7 @@
 			projectRoot = "";
 			targets = (
 				4AE01B9A2BE654CF001FBDB0 /* UITablewViewTDD */,
+				4AE01BB52BE654F0001FBDB0 /* UITablewViewTDDTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,7 +174,13 @@
 			files = (
 				4AE01BAB2BE654D0001FBDB0 /* LaunchScreen.storyboard in Resources */,
 				4AE01BA82BE654D0001FBDB0 /* Assets.xcassets in Resources */,
-				4AE01BA62BE654CF001FBDB0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AE01BB42BE654F0001FBDB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +191,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AE01BA32BE654CF001FBDB0 /* ViewController.swift in Sources */,
 				4AE01B9F2BE654CF001FBDB0 /* AppDelegate.swift in Sources */,
 				4AE01BA12BE654CF001FBDB0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4AE01BB22BE654F0001FBDB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AE01BB92BE654F0001FBDB0 /* UITablewViewTDDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		4AE01BA42BE654CF001FBDB0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4AE01BA52BE654CF001FBDB0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		4AE01BBB2BE654F0001FBDB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AE01B9A2BE654CF001FBDB0 /* UITablewViewTDD */;
+			targetProxy = 4AE01BBA2BE654F0001FBDB0 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		4AE01BA92BE654D0001FBDB0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +356,6 @@
 				INFOPLIST_FILE = UITablewViewTDD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,6 +365,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcosapostolo.UITablewViewTDD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,7 +385,6 @@
 				INFOPLIST_FILE = UITablewViewTDD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,9 +394,46 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcosapostolo.UITablewViewTDD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4AE01BBD2BE654F0001FBDB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosapostolo.UITablewViewTDDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITablewViewTDD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UITablewViewTDD";
+			};
+			name = Debug;
+		};
+		4AE01BBE2BE654F0001FBDB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosapostolo.UITablewViewTDDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITablewViewTDD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UITablewViewTDD";
 			};
 			name = Release;
 		};
@@ -356,6 +454,15 @@
 			buildConfigurations = (
 				4AE01BB02BE654D0001FBDB0 /* Debug */,
 				4AE01BB12BE654D0001FBDB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AE01BBC2BE654F0001FBDB0 /* Build configuration list for PBXNativeTarget "UITablewViewTDDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AE01BBD2BE654F0001FBDB0 /* Debug */,
+				4AE01BBE2BE654F0001FBDB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
