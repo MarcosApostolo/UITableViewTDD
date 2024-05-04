@@ -31,10 +31,10 @@ public final class ItemsListViewController: UITableViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        loader?.load(completion: { result in
+        loader?.load(completion: { [weak self] result in
             switch result {
             case .failure:
-                self.errorMessageLabel.isHidden = false
+                self?.errorMessageLabel.isHidden = false
             default:
                 break
             }

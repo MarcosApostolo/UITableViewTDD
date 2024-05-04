@@ -10,10 +10,7 @@ import UITablewViewTDD
 
 final class ItemsListUIIntegrationTests: XCTestCase {
     func test_onLoad_loadItems() {
-        let loader = LoaderSpy()
-        let sut = ItemsListViewController()
-        
-        sut.loader = loader
+        let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
         
@@ -21,10 +18,7 @@ final class ItemsListUIIntegrationTests: XCTestCase {
     }
     
     func test_onLoadError_displayErrorMessage() {
-        let loader = LoaderSpy()
-        let sut = ItemsListViewController()
-        
-        sut.loader = loader
+        let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
         
@@ -33,6 +27,19 @@ final class ItemsListUIIntegrationTests: XCTestCase {
         loader.completeWithError()
         
         XCTAssertFalse(sut.errorMessageLabel.isHidden, "Expect error message to be displayed when load fails")
+    }
+    
+    // MARK Helpers
+    func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: ItemsListViewController, loader: LoaderSpy) {
+        let loader = LoaderSpy()
+        let sut = ItemsListViewController()
+        
+        sut.loader = loader
+        
+        checkForMemoryLeaks(sut, file: file, line: line)
+        checkForMemoryLeaks(loader, file: file, line: line)
+        
+        return (sut, loader)
     }
 }
 
